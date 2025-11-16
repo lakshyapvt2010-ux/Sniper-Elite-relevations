@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Theft Auto</title>
+  
+  <!-- Fonts and Animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image copy 8.png">
+
+
+  <style>
+    /* GENERAL PAGE SETTINGS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      background-color: #000;
+      overflow-x: hidden;
+      
+    }
+
+    /* FIXED NAVBAR */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      z-index: 1000;
+
+    }
+    #img6{
+      height: 100px;
+      position: absolute;
+      top:-400px;
+    }
+
+    #navbar h2 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    #navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    #navbar ul li a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    #navbar ul li a:hover {
+      color: #f5c518;
+    }
+
+    /* HERO SECTION */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("image copy 7.png") center/cover no-repeat fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      padding: 0 10%;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 0 10px;
+      border: 2px solid #f5c518;
+      color: #f5c518;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      background: rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      background: #f5c518;
+      color: black;
+      box-shadow: 0 0 20px #f5c518;
+      cursor: pointer;
+    }
+
+    /* UNIVERSAL SECTION STYLE */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 100px 5%;
+      text-align: left;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+
+    section .content {
+      z-index: 1;
+      max-width: 550px;
+    }
+
+    section h1 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #f2f2f2;
+    }
+
+    section img {
+      width: 45%;
+      max-width: 600px;
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+      z-index: 1;
+    }
+
+    section img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    /* RESPONSIVENESS */
+    @media (max-width: 900px) {
+      section {
+        flex-direction: column;
+        text-align: center;
+      }
+      section img {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+      section .content {
+        max-width: 90%;
+      }
+      #navbar ul {
+        display: none; /* simplify navbar for small screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎵 Audio -->
+  <audio id="intro-sound" src="Ah Shit Here We Go Again GTA - QuickSounds.com.mp3" preload="auto"></audio>
+
+  <!-- NAVBAR -->
+  <div id="navbar">
+    <h2>GTA V</h2>
+    <ul>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#online">Online</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#career">Career</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header>
+    <h1 data-aos="fade-up">Now available for PlayStation 5, Xbox Series X|S, and PC</h1>
+    <div class="buttons" data-aos="fade-in" data-aos-delay="500">
+      <a href="#" class="btn">Watch the Trailer</a>
+      <a href="#" class="btn">Buy Now</a>
+      
+    </div>
+  </header>
+
+  <!-- STORY SECTION -->
+  <section id="story" style="background-image: url('image copy 10.png');">
+    <img src="image copy 3.png" alt="Los Santos" data-aos="fade-right">
+    <div class="content" data-aos="fade-left">
+      <h1>Welcome to Los Santos</h1>
+      <p>
+        When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled
+        with some of the most frightening and deranged elements of the criminal underworld, they must pull off
+        a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.
+      </p>
+      <br>
+      <p>
+        GTAV players on PC can migrate their Story Mode progress and GTA Online characters and progression to the newly
+        upgraded version. Players on PlayStation 4 or Xbox One can also transfer both Story Mode and Online progress
+        to PlayStation 5 or Xbox Series X|S with a one-time migration.
+      </p>
+    </div>
+  </section>
+
+  <!-- ONLINE SECTION -->
+  <section id="online" style="background-image: url('image copy 9.png'); flex-direction: row-reverse;">
+    <img src="image copy 5.png" alt="GTA Online" data-aos="fade-left">
+    <div class="content" data-aos="fade-right">
+      <h1>Grand Theft Auto Online</h1>
+      <p>
+        Experience GTA Online, a dynamic and ever-evolving online universe for up to 30 players, where you can rise from
+        street-level hustler to become a kingpin of your own criminal empire.
+      </p>
+      <br>
+      <p>
+        Enjoy new high-performance vehicle upgrades, the Career Builder, and all gameplay expansions released since launch —
+        ready to enjoy solo or with friends. Pull off daring Heists, enter adrenaline-fueled Stunt Races, or hang out in
+        nightclubs, arcades, and car meetups.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXCLUSIVE CONTENT -->
+  <section id="content" style="background-image: url('image copy 12.png');">
+    <img src="Screenshot 2025-11-09 at 01.27.21.png" alt="Exclusive Content" data-aos="fade-right">
+    <div class="content" data-aos="fade-left">
+      <h1>Exclusive New Content</h1>
+      <p>
+        Step into Hao’s Special Works at the Los Santos Car Meet, featuring elite new upgrades and exclusive modifications.
+        Then take these high-performance vehicles into HSW races, new time trials, and more.
+      </p>
+    </div>
+  </section>
+
+  <!-- CAREER BUILDER -->
+  <section id="career" style="background-image: url('image copy 12.png'); flex-direction: row-reverse;">
+    <img src="Screenshot 2025-11-09 at 21.53.25.png" alt="Career Builder" data-aos="fade-left">
+    <div class="content" data-aos="fade-right">
+      <h1>New Career Builder</h1>
+      <p>
+        Get started in GTA Online with the tools of the trade. Quickly choose from one of four businesses — Biker, Executive,
+        Nightclub Owner, or Gunrunner — and select from properties, powerhouse vehicles, and weaponry to kick-start your enterprise.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="text-align:center; padding: 40px 0; background:black; font-size:14px;">
+    © Rockstar Games | GTA V Fan Styled Page by Lakshya
+  </footer>
+
+  <!-- JS ANIMATIONS + NAVBAR SCROLL EFFECT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: true });
+
+    // Navbar scroll effect
+    window.addEventListener("scroll", () => {
+      const nav = document.getElementById("navbar");
+      nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Audio autoplay handling
+    window.addEventListener("load", () => {
+      const audio = document.getElementById('intro-sound');
+      audio.play().catch(() => {
+        document.body.addEventListener('click', () => audio.play(), { once: true });
+      });
+    });
+  </script>
+</body>
+</html>
