@@ -1,98 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grand Theft Auto</title>
-  
-  <!-- Fonts and Animations -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA V Styled Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="image copy 8.png">
-
-
   <style>
-    /* GENERAL PAGE SETTINGS */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Open Sans', sans-serif;
-      color: white;
-      background-color: #000;
-      overflow-x: hidden;
-      
+    overflow-x: hidden;
+    background-image: url("image copy 7.png"); /* or .png, .jpeg, etc. */
+    background-size: cover;      /* makes image cover entire screen */
+    background-repeat: no-repeat; /* prevents tiling */
+    background-position: center; /* centers the image */
+    background-attachment: fixed; /* keeps image fixed during scroll */
     }
 
-    /* FIXED NAVBAR */
+
     #navbar {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      background-color: black;
       height: 70px;
-      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      color: white;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      color: white;
-      font-family: 'Oswald', sans-serif;
+      padding-left: 20px;
+      font-family: Arial, sans-serif;
       font-weight: bold;
-      z-index: 1000;
-
+      z-index: 10;
     }
-    #img6{
-      height: 100px;
+    #navbarimg1{
+        position: absolute;
+        height: 50px; 
+        width: 250px;
+        left:130px;
+        top: 5px;
+    }
+
+    #navbarimg2{
+        position: absolute;
+        height: 67px; 
+        width: 50px;
+        left:77px 
+        
+    }
+    #loginimg{
+        position: absolute;
+        height: 50px; 
+        width: 45px;
+        right: 40px;   }
+
+     #img2{
+        position: absolute;
+        height: 210px;
+        width: 210px;
+        top: -155px;
+        left: -90px;
+    }
+    #img3{
+        position: absolute;
+        height: 160px;
+        width: 180px;
+        top: -145px;
+        left: 140px;
+    }
+
+    #overlay {
       position: absolute;
-      top:-400px;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      right: 0;
     }
 
-    #navbar h2 {
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
-
-    #navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    #navbar ul li a {
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    #navbar ul li a:hover {
-      color: #f5c518;
-    }
-
-    /* HERO SECTION */
-    header {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                  url("image copy 7.png") center/cover no-repeat fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    #content {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      color: white;
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
-      padding: 0 10%;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 36px;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      width: 80%;
+      line-height: 1.3;
+      letter-spacing: 1px;
+      right: 0%;
     }
 
     .buttons {
@@ -103,208 +103,397 @@
       display: inline-block;
       padding: 14px 28px;
       margin: 0 10px;
-      border: 2px solid #f5c518;
-      color: #f5c518;
+      border: 2px solid white;
+      color: white;
       text-transform: uppercase;
       font-weight: bold;
       text-decoration: none;
       font-size: 16px;
-      background: rgba(255,255,255,0.1);
-      transition: all 0.3s ease;
+      background: transparent;
+      /* transition: all 0.3s ease; */
       letter-spacing: 1px;
     }
 
     .btn:hover {
-      background: #f5c518;
+      background-color: white;
       color: black;
-      box-shadow: 0 0 20px #f5c518;
       cursor: pointer;
     }
+    .divbody{
+        position: absolute;
+        background-color: black;
+        height: 700px;
+        width: 100vw;
+        top:100%;
+        left: 0px;
+        opacity: 1;
+        background-image: url("image copy 10.png"); /* or .png, .jpeg, etc. */
+        background-size: cover;      /* makes image cover entire screen */
+        background-repeat: no-repeat; /* prevents tiling */
+        background-position: center; /* centers the image */
+        background-attachment: fixed; /* keeps image fixed during scroll */
+        
+    }
+    .divbodytwo{
+        position: absolute;
+        background-color: black;
+        height: 700px;
+        width: 100%;
+        top: 181.5%;
+        left: 0px;
+        background-image: url("image copy 9.png"); /* or .png, .jpeg, etc. */
+        background-size: cover;      /* makes image cover entire screen */
+        background-repeat: no-repeat; /* prevents tiling */
+        background-position: center; /* centers the image */
+        background-attachment: fixed; /* keeps image fixed during scroll */
+    }
+    .divbodythree{
+        position: absolute;
+        height: 500px;
+        width: 100%;
+        top: 263%;
+        left: 0px;
+        background-image: url("image copy 12.png"); /* or .png, .jpeg, etc. */
+        background-size: cover;      /* makes image cover entire screen */
+        background-repeat: no-repeat; /* prevents tiling */
+        background-position: center; /* centers the image */
+        background-attachment: fixed; /* keeps image fixed during scroll */
 
-    /* UNIVERSAL SECTION STYLE */
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-      padding: 100px 5%;
-      text-align: left;
+    }
+    .divbodyfour{
+        position: absolute;
+        height: 500px;
+        width: 100%;
+        top: 321.5%;
+        left: 0px;
+        background-image: url("image copy 12.png"); /* or .png, .jpeg, etc. */
+        background-size: cover;      /* makes image cover entire screen */
+        background-repeat: no-repeat; /* prevents tiling */
+        background-position: center; /* centers the image */
+        background-attachment: fixed; /* keeps image fixed during scroll */
+
+    }
+    .divbodyfive{
+      position: absolute;
+      height: 800px;
+      width: 100%;
+      top: 385% ;
+      left: 0px;
+      background-color: black;
       background-size: cover;
+      background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
-      position: relative;
+      opacity: 0.9;
+    }
+    #img5{
+        position:absolute;
+        height: 600px;
+        width: 600px;
+        top: 13.7%;
+        left: 150px;
+    }
+    #img6{
+        position: relative;
+        height: 150px;
+        width: 150x;
+        top: 100px;
+        left: 1105px;
+    }
+    #divbodycontent{
+        position: absolute;
+        right:248px;
+        top: 230px;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+    img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    }
+    .btn:hover {
+    box-shadow: 0 0 10px white;
     }
 
-    section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 0;
+
+    #divpara1 {
+    position: absolute;
+    right: 112px;
+    top: 320px; /* moved below heading */
+    width: 500px; /* gives paragraph readable width */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    line-height: 1.5;
+    font-size: 18px;
+    }
+    #divpara2{
+    position: absolute;
+    left: 112px;
+    top: 320px; /* moved below heading */
+    width: 500px; /* gives paragraph readable width */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom:0;
+    }
+    
+    #divpara3{
+    position: absolute;
+    right: 60px;
+    top: 150px; /* moved below heading */
+    width: 500px; /* gives paragraph readable width */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    line-height: 1.8;
+    font-size: 20px;
+    margin-bottom:0;
+    }
+    #divpara4{
+    position: absolute;
+    right: 775px;
+    top: 150px; /* moved below heading */
+    width: 500px; /* gives paragraph readable width */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    line-height: 1.8;
+    font-size: 20px;
+    margin-bottom:0;
+    }
+    #divpara5{
+    position: absolute;
+    right: 100px;
+    top: 150px; /* moved below heading */
+    width: 500px; /* gives paragraph readable width */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    line-height: 1.8;
+    font-size: 20px;
+    margin-bottom:0;
+    }
+    #divpara6{
+    position: absolute;
+    right: 850px;
+    bottom: 60px; /* moved below heading */
+    width: 500px; /* gives paragraph readable width */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    line-height: 1.8;
+    font-size: 20px;
+    margin-bottom:0;
+    }
+    #image7{
+        position:absolute;
+        height: 600px;
+        width: 600px;
+        top: 13%;
+        right: 120px;
+    }
+    #img8{
+        position: relative;
+        height: 150px;
+        width: 150x;
+        top: 85px;
+        left: 200px;
+    }
+    #image8{
+        position: relative;
+        height: 350px;
+        width: 250x;
+        top: 85px;
+        left: 100px;
+        border-radius: 10px;
+    }
+    #image9{
+        position: absolute;
+        height: 100px;
+        width: 80x;
+        top: 80px;
+        left: 810px;
+    }
+    #image10{
+        position:absolute;
+        height: 350px;
+        border: 2px solid black;
+        width: 550px;
+        top: 11%;
+        right: 100px;
+    }
+    #image11{
+        position:absolute;
+        height: 300px;
+        border: 2px ;
+        width: 500px;
+        top: 11%;
+        left: 150px;
+    }
+    #image12{
+        position:absolute;
+        height: 300px;
+        border: 2px ;
+        width: 500px;
+        bottom: 11%;
+        right: 100px;
+    }
+    #divbodycontent2{
+        position: absolute;
+        right: 915px;
+        top: 230px;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+    #divbodycontent3{
+        position: absolute;
+        right: 200px;
+        top: 50px;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+
+    }
+    #divbodycontent4{
+        position: absolute;
+        right: 950px;
+        top: 35px;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+    #divbodycontent5{
+        position: absolute;
+        right: 250px;
+        top: 50px;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+    #divbodycontent6{
+        position: absolute;
+        left: 13%;
+        bottom: 37%;
+        font-weight: bolder;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+    .fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
     }
 
-    section .content {
-      z-index: 1;
-      max-width: 550px;
-    }
 
-    section h1 {
-      font-family: 'Oswald', sans-serif;
-      text-transform: uppercase;
-      font-size: 2.3rem;
-      margin-bottom: 20px;
-    }
-
-    section p {
-      line-height: 1.7;
-      font-size: 1rem;
-      color: #f2f2f2;
-    }
-
-    section img {
-      width: 45%;
-      max-width: 600px;
-      border-radius: 10px;
-      transition: transform 0.4s ease;
-      z-index: 1;
-    }
-
-    section img:hover {
-      transform: scale(1.05);
-      cursor: pointer;
-    }
-
-    /* RESPONSIVENESS */
-    @media (max-width: 900px) {
-      section {
-        flex-direction: column;
-        text-align: center;
-      }
-      section img {
-        width: 90%;
-        margin-bottom: 20px;
-      }
-      section .content {
-        max-width: 90%;
-      }
-      #navbar ul {
-        display: none; /* simplify navbar for small screens */
-      }
-    }
+    
   </style>
 </head>
-
 <body>
-
-  <!-- 🎵 Audio -->
-  <audio id="intro-sound" src="Ah Shit Here We Go Again GTA - QuickSounds.com.mp3" preload="auto"></audio>
-
-  <!-- NAVBAR -->
-  <div id="navbar">
-    <h2>GTA V</h2>
-    <ul>
-      <li><a href="#story">Story</a></li>
-      <li><a href="#online">Online</a></li>
-      <li><a href="#content">Content</a></li>
-      <li><a href="#career">Career</a></li>
-    </ul>
-  </div>
-
-  <!-- HERO SECTION -->
-  <header>
-    <h1 data-aos="fade-up">Now available for PlayStation 5, Xbox Series X|S, and PC</h1>
-    <div class="buttons" data-aos="fade-in" data-aos-delay="500">
-      <a href="#" class="btn">Watch the Trailer</a>
-      <a href="#" class="btn">Buy Now</a>
-      
-    </div>
-  </header>
-
-  <!-- STORY SECTION -->
-  <section id="story" style="background-image: url('image copy 10.png');">
-    <img src="image copy 3.png" alt="Los Santos" data-aos="fade-right">
-    <div class="content" data-aos="fade-left">
-      <h1>Welcome to Los Santos</h1>
-      <p>
-        When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled
-        with some of the most frightening and deranged elements of the criminal underworld, they must pull off
-        a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.
-      </p>
-      <br>
-      <p>
-        GTAV players on PC can migrate their Story Mode progress and GTA Online characters and progression to the newly
-        upgraded version. Players on PlayStation 4 or Xbox One can also transfer both Story Mode and Online progress
-        to PlayStation 5 or Xbox Series X|S with a one-time migration.
-      </p>
-    </div>
-  </section>
-
-  <!-- ONLINE SECTION -->
-  <section id="online" style="background-image: url('image copy 9.png'); flex-direction: row-reverse;">
-    <img src="image copy 5.png" alt="GTA Online" data-aos="fade-left">
-    <div class="content" data-aos="fade-right">
-      <h1>Grand Theft Auto Online</h1>
-      <p>
-        Experience GTA Online, a dynamic and ever-evolving online universe for up to 30 players, where you can rise from
-        street-level hustler to become a kingpin of your own criminal empire.
-      </p>
-      <br>
-      <p>
-        Enjoy new high-performance vehicle upgrades, the Career Builder, and all gameplay expansions released since launch —
-        ready to enjoy solo or with friends. Pull off daring Heists, enter adrenaline-fueled Stunt Races, or hang out in
-        nightclubs, arcades, and car meetups.
-      </p>
-    </div>
-  </section>
-
-  <!-- EXCLUSIVE CONTENT -->
-  <section id="content" style="background-image: url('image copy 12.png');">
-    <img src="Screenshot 2025-11-09 at 01.27.21.png" alt="Exclusive Content" data-aos="fade-right">
-    <div class="content" data-aos="fade-left">
-      <h1>Exclusive New Content</h1>
-      <p>
-        Step into Hao’s Special Works at the Los Santos Car Meet, featuring elite new upgrades and exclusive modifications.
-        Then take these high-performance vehicles into HSW races, new time trials, and more.
-      </p>
-    </div>
-  </section>
-
-  <!-- CAREER BUILDER -->
-  <section id="career" style="background-image: url('image copy 12.png'); flex-direction: row-reverse;">
-    <img src="Screenshot 2025-11-09 at 21.53.25.png" alt="Career Builder" data-aos="fade-left">
-    <div class="content" data-aos="fade-right">
-      <h1>New Career Builder</h1>
-      <p>
-        Get started in GTA Online with the tools of the trade. Quickly choose from one of four businesses — Biker, Executive,
-        Nightclub Owner, or Gunrunner — and select from properties, powerhouse vehicles, and weaponry to kick-start your enterprise.
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="text-align:center; padding: 40px 0; background:black; font-size:14px;">
-    © Rockstar Games | GTA V Fan Styled Page by Lakshya
-  </footer>
-
-  <!-- JS ANIMATIONS + NAVBAR SCROLL EFFECT -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1200, once: true });
-
-    // Navbar scroll effect
-    window.addEventListener("scroll", () => {
-      const nav = document.getElementById("navbar");
-      nav.classList.toggle("scrolled", window.scrollY > 50);
-    });
-
-    // Audio autoplay handling
-    window.addEventListener("load", () => {
-      const audio = document.getElementById('intro-sound');
-      audio.play().catch(() => {
-        document.body.addEventListener('click', () => audio.play(), { once: true });
-      });
-    });
   </script>
+  <div id="navbar">
+    <img id="navbarimg1" src="image copy 13.png">
+    <hr style="position: absolute; width:39px; transform:rotate(90deg); border:1px solid gray; left: 110px;">
+    <img id="navbarimg2" src="image copy 14.png">
+    <img id="loginimg" src="Screenshot 2025-11-11 at 16.25.14.png">
+  </div>
+  <div id="overlay"></div>
+  <div id="content">
+    <h1 class="fade-in">Now available for PlayStation 5, Xbox Series X|S, and PC</h1>
+    <img id="img2" src="pngimg.com - gta_PNG13.png">
+    <img id="img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Grand_Theft_Auto_Online_Logo.svg/385px-Grand_Theft_Auto_Online_Logo.svg.png">
+    
+
+    <div class="buttons">
+      <a href="#"class="btn">Watch the Trailer</a>
+      <a href="#" class="btn">Buy Now</a>
+    </div>
+  </div>
+<div class="divbody">
+    <img src="image copy 3.png" id="img5">
+    <img id="img6" src="pngimg.com - gta_PNG13.png">
+    <h1 id="divbodycontent" class="fade-in" style="color: white;">Welcome To los Santos</h1>
+    <div id="divpara1">
+        <p>
+        When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.
+        </p>
+        <p>
+            GTAV players on PC can migrate their Story Mode progress and GTA Online characters and progression to the newly upgraded version. Players on PlayStation 4 or Xbox One can also transfer both Story Mode and Online progress to PlayStation 5 or Xbox Series X|S with a one-time migration.
+        </p>
+    </div>
+</div>
+
+<div class="divbodytwo">
+    <img src="image copy 5.png" id="image7">
+    <img id="img8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Grand_Theft_Auto_Online_Logo.svg/385px-Grand_Theft_Auto_Online_Logo.svg.png">
+    <h1 id="divbodycontent2" class="fade-in" style="color: white;">
+Grand Theft Auto Online</h1>
+        <div id="divpara2">
+        <p>
+       Experience GTA Online, a dynamic and ever-evolving online universe for up to 30 players, where you can rise from street-level hustler to become a kingpin of your own criminal empire.
+        </p>
+        <p>
+            Enjoy new high-performance vehicle upgrades and improvements like the Career Builder as well as all GTA Online gameplay upgrades, expansions, and content released since launch, ready to enjoy solo or with friends. Pull off daring co-operative Heists, enter adrenaline-fueled Stunt Races, compete in unique Adversary Modes, or hang out in social spaces including nightclubs, arcades, penthouse parties, car meetups, and much more.
+        </p>
+    </div>
+</div>
+<div class="divbodythree">
+    <img id="image9" src="image copy 8.png">
+    <img src="Screenshot 2025-11-09 at 01.27.21.png" id="image8">
+    
+    <h1 id="divbodycontent3" class="fade-in" style="color: white;">
+    Exclusive New Content</h1>
+        <div id="divpara3">
+            <p>
+                Step into Hao’s Special Works at the Los Santos Car Meet, featuring elite new upgrades and exclusive modifications. Then take these high-performance vehicles into HSW races, new time trials, and more.
+            </p>
+        </div>
+</div>
+<div class="divbodyfour">
+    <img id="image10" src="Screenshot 2025-11-09 at 21.53.25.png">
+    <h1 id="divbodycontent4" class="fade-in" style="color: white;">
+        New Career Builder
+    </h1>
+        <div id="divpara4">
+            <p>
+                Get started in GTA Online with the tools of the trade. Quickly choose from one of four businesses — Biker, Executive, Nightclub Owner, or Gunrunner — and select from properties, powerhouse vehicles, and weaponry to kick-start your enterprise.
+            </p>
+
+        </div>
+    
+
+</div>
+<div class="divbodyfive">
+  <img id="image11" src="Screenshot 2025-11-12 at 19.48.33.png">
+  <h1 id="divbodycontent5" class="fade-in " style="color: white;">
+    Faster Loading
+  </h1>
+    <div id="divpara5">
+      <p>
+        Quicker access to the action as the world of Los Santos and Blaine County load in faster than ever before.Rockstar rewrote portions of the game’s initialization and data loading code, removing redundant processes that slowed down startup.
+      </p>
+    </div>
+    <div class="divbody6">
+  <img id="image12" src="Screenshot 2025-11-12 at 19.50.17.png">
+  <h1 id="divbodycontent6" class="fade-in" style="color: white;">
+      Immersive Controls
+  </h1>
+  <div id="divpara6">
+    <p>
+      Feel new levels of responsiveness with Haptic Feedback and dynamic resistance via the Adaptive Triggers on PlayStation 5’s DualSense® wireless controller, from directional damage to weather effects, rough road surfaces to explosions, and much more. DualSense controller support is also now available for PC, with adaptive triggers.
+    </p>
+  </div>
+</div>
+
+
+</div>
+
 </body>
 </html>
